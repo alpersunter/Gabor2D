@@ -4,6 +4,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
   <script src="sketch.js"></script>
   <script src="2d_gabor.js"></script>
+  <script src="image.js"></script>
   <link rel="stylesheet" href="slider.css">
 </head>
 
@@ -27,11 +28,15 @@
 
       <td>
 
-        <div style="float:left; width: 500px; margin: auto; border: 3px solid #73AD21;">
+        <div style="float:left; width: auto; margin: auto; border: 3px solid #73AD21;">
           <img src="gabor.svg" />
           <div class="slidecontainer">
+            <p id="dimensions_p">Kernel size: (100x100)</p>
+            <input type="range" min="3" max="500" value="100" class="slider" id="dimensions_slider">
+          </div>
+          <div class="slidecontainer">
             <p id="sigma_p">Sigma: 76</p>
-            <input type="range" min="0" max="10" value="3" class="slider" id="sigma_slider">
+            <input type="range" min="0" max="30" value="3" class="slider" id="sigma_slider">
           </div>
           <div class="slidecontainer">
             <p id="theta_p">Theta: 0</p>
