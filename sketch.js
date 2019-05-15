@@ -28,12 +28,12 @@ function setup() {
         redraw();
     }
 
-    // Sigma. Maps 0-30 to 1-250
+    // Sigma. Maps 0-90 to 1-271
     let sigma_slider = document.getElementById("sigma_slider");
     let sigma_label = document.getElementById("sigma_p");
     sigma_slider.oninput = function () {
-        sigma_label.innerText = "Sigma: " + (1 + this.value * 8);
-        gabor_params.sigma = (1 + this.value * 8);
+        sigma_label.innerText = "Sigma: " + (1 + this.value * 3);
+        gabor_params.sigma = (1 + this.value * 3);
         redraw();
     }
 
