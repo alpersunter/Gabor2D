@@ -28,12 +28,12 @@ function setup() {
         redraw();
     }
 
-    // Sigma. Maps 0-90 to 1-271
+    // Sigma. In range of 1-250. No mapping.
     let sigma_slider = document.getElementById("sigma_slider");
     let sigma_label = document.getElementById("sigma_p");
     sigma_slider.oninput = function () {
-        sigma_label.innerText = "Sigma: " + (1 + this.value * 3);
-        gabor_params.sigma = (1 + this.value * 3);
+        sigma_label.innerText = "Sigma: " +  this.value ;
+        gabor_params.sigma =  this.value;
         redraw();
     }
 
@@ -46,7 +46,7 @@ function setup() {
         redraw();
     }
 
-    // Lambda. In range of 1-250
+    // Lambda. In range of 1-250. No mapping.
     let lambda_slider = document.getElementById("lambda_slider");
     let lambda_label = document.getElementById("lambda_p");
     lambda_slider.oninput = function () {
